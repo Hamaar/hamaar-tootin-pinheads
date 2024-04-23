@@ -12,11 +12,22 @@ import java.util.Collections;
 import java.util.List;
 
 public class HamaarTootinPinheadsPackage implements ReactPackage {
+
+  private final boolean mLoadConstantsAsynchronously;
+
+  public HamaarTootinPinheadsPackage() {
+    this(false);
+  }
+
+  public HamaarTootinPinheadsPackage(boolean loadConstantsAsynchronously) {
+    mLoadConstantsAsynchronously = loadConstantsAsynchronously;
+  }
+  
   @NonNull
   @Override
   public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new HamaarTootinPinheadsModule(reactContext));
+    modules.add(new HamaarTootinPinheadsModule(reactContext, mLoadConstantsAsynchronously));
     return modules;
   }
 

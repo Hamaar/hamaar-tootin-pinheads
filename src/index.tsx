@@ -17,6 +17,21 @@ const HamaarTootinPinheads = NativeModules.HamaarTootinPinheads
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return HamaarTootinPinheads.multiply(a, b);
-}
+export default {
+  isHamaarTootinTrust: () => HamaarTootinPinheads.isHamaarTootinTrust || false,
+  isHamaarDetectXuniles: () =>
+    HamaarTootinPinheads.isHamaarDetectXuniles || false,
+  setHamaarPinHeads: (
+    pinUrlServer: string,
+    pinSHA256: string,
+    successCalback: any,
+    errorCallback: any
+  ) =>
+    HamaarTootinPinheads.setHamaarPinHeads(
+      pinUrlServer,
+      pinSHA256,
+      successCalback,
+      errorCallback
+    ),
+  closeHamaarApplication: () => HamaarTootinPinheads.closeHamaarApplication(),
+};

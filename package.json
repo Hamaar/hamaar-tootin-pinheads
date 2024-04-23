@@ -1,7 +1,7 @@
 {
   "name": "hamaar-tootin-pinheads",
-  "version": "0.1.0",
-  "description": "libs for root and ssl pinning",
+  "version": "0.1.4",
+  "description": "libs for android root and ssl pinning",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -61,7 +61,7 @@
     "@types/react": "^18.2.44",
     "commitlint": "^17.0.2",
     "del-cli": "^5.1.0",
-    "eslint": "^8.51.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "jest": "^29.7.0",
